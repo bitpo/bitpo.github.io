@@ -1,5 +1,5 @@
 ---
-title: Series Rust là cái rỉ sét - Bài 0: Rust là gì?
+title: "Series Rust là cái rỉ sét - Bài 0: Rust là gì?"
 tags: Rust
 ---
 # Tác giả, tác phẩm
@@ -19,7 +19,9 @@ Bạn thấy sao? Có phải đang khó chịu vì đến cái chữ function c�
 # Rust lái xe nhanh mà vẫn an toàn ?
 ## Đánh đổi giữa tốc độ và sự an toàn 
 Trước hết bạn hãy nhìn vào hình dưới đây
+
 ![](/imgs/1.PNG)
+
 Khi làm việc với Assembly bạn cần phải làm việc với ô nhớ, địa chỉ ô nhớ, tập lệnh ứng với loại CPU đang sử dụng, hãy nhìn đoạn mã Assembly hello world dưới đây và cảm ơn Chúa.
 ```
 ;Copyright (c) 1999 Konstantin Boldyshev <konst@linuxassembly.org>
@@ -58,6 +60,7 @@ mov ebx,0   ;process' exit code
 mov eax,1   ;system call number (sys_exit)
 int 0x80    ;call kernel - this interrupt won't return
 ```
+
 Nhưng bù lại cho sự tổn thương tâm hồn này đó là Assembly rất gần với mã máy (machine/binary code) ít lớp trừu tượng che phủ, do đó việc biên dịch cũng như thực thi sẽ trực tiếp và nhanh hơn.
 
 Càng nhiều lớp trừu tượng che phủ, chúng ta sẽ càng code ít hơn nhưng bù lại không thể biết được bên dưới compiler đã thêm thắt cái gì vào code của mình. Vd khi lập trình C, C++ chúng ta khai báo biến cùng kiểu của nó (strong typed language) tức là ta đã chỉ định cho compiler biết trước đây là kiểu dữ liệu gì, cần bao nhiêu bộ nhớ, cấp phát tại heap hay stack ... Nhưng với python, js ta không cần khai báo kiểu, đồng nghĩa với việc máy tính sẽ phải thêm 1 bước nội suy ra xem đây là kiểu dữ liệu gì để còn cấp phát bộ nhớ và kết quả là sẽ chậm đi khá nhiều.
@@ -92,7 +95,9 @@ Rust có những bộ nguyên tắc để đảm bảo an toàn cho chương tr�
 * Tại một thời điểm, nhiều ông có thể đến để xem đất (read-only), nhưng chỉ có 1 ông có quyền sử dụng đất đó.
 
 Đến đây nhiều bạn sẽ tự hỏi thế lúc code phải nhớ hết đống luật rừng này để code à, khổ sở thế, thế code C, C++ cho nó lành. Từ đã bạn ơi, bạn không cần phải tự làm hết đâu, Rust compiler sẽ giúp bạn giải phóng bộ nhớ bằng cách chèn thêm code vào code của bạn mỗi khi nó phát hiện thấy một biến không còn được sử dụng nữa. Dưới đây là vd minh họa khi Rust và C được biên dịch ra Assembly:
+
 ![](/imgs/2.png)
+
 Assembly từ Rust có thêm vài câu lệnh để giải phóng bộ nhớ so với C, thêm một vài lệnh assembly để giữ cho chương trình không bị leak ram và lỗi tiềm ẩn khi chạy production là một đánh đổi rất hợp lý. Sẽ có nhiều người thắc mắc việc này có làm Rust chậm đi so vs C không thì câu trả lời là không. Vì nếu bạn code production bằng C thì kiểu gì bạn cũng phải thêm lệnh free vào code để giải phóng bộ nhớ thôi, chưa kể có thể free nhầm chỗ hoặc double free thì thôi xong luôn.
 
 # Rust có thể làm được gì?
@@ -101,19 +106,17 @@ Ez, làm gì cũng được, nhưng là một ngôn ngữ lập trình hệ th�
 * [Core trình duyệt](https://github.com/servo/servo)
 * [Web backend](https://www.arewewebyet.org)
 * [Mobile app](https://github.com/rust-unofficial/awesome-rust#mobile)
-* Viết terminal (cá nhân mình dùng Wezterm được viết bằng Rust)
+* [Viết terminal](https://github.com/wez/wezterm) (cá nhân mình dùng Wezterm được viết bằng Rust)
 * [Cross-platform app](https://github.com/tauri-apps/tauri)
 * [Machine learning](https://www.arewelearningyet.com/)
 * [Game](https://github.com/rust-unofficial/awesome-rust#games)
 * ...
 
-Các bạn có thể tham khảo thêm tại https://github.com/rust-unofficial/awesome-rust
+Các bạn có thể tham khảo thêm tại [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
 
 # Kết bài
 Đây là bài mở đầu cho series "Rust là cái gỉ sét". Các bài tiếp theo mình sẽ đi sâu hơn theo sườn của [Rust book](https://doc.rust-lang.org/book/). Các bạn có thể coi như là series translate Rust book sang tiếng việt. Có thể có bài mình sẽ ra dạng vlog.
 
 Ngoài ra đừng quên theo dõi [Blog chính thức của Rust](https://blog.rust-lang.org/) nơi core team đưa ra thông báo về các version, [Bản tin Rust hàng tuần](https://this-week-in-rust.org/) - nơi bạn sẽ biết được các biến động trong cộng đồng rust mỗi tuần.
 
-See ya,
-
-God bless you!
+See ya, God bless you!
