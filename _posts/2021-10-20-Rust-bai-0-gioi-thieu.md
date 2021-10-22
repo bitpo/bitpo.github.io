@@ -1,5 +1,5 @@
 ---
-title: Series Rust là cái rỉ sét - Bài 0: Rust là gì?
+title: Series Rust là cái rỉ sét - Bài 0 - Rust là gì?
 tags: Rust
 ---
 # Tác giả, tác phẩm
