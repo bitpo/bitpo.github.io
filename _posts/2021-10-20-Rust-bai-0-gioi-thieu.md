@@ -1,5 +1,5 @@
 ---
-title: Series Rust là cái rỉ sét - Bài 0: Rust là gì?
+title: Series Rust là cái rỉ sét - Bài 0 - Rust là gì?
 tags: Rust
 ---
 # Tác giả, tác phẩm
@@ -63,7 +63,7 @@ int 0x80    ;call kernel - this interrupt won't return
 
 Nhưng bù lại cho sự tổn thương tâm hồn này đó là Assembly rất gần với mã máy (machine/binary code) ít lớp trừu tượng che phủ, do đó việc biên dịch cũng như thực thi sẽ trực tiếp và nhanh hơn.
 
-Càng nhiều lớp trừu tượng che phủ, chúng ta sẽ càng code ít hơn nhưng bù lại không thể biết được bên dưới compiler đã thêm thắt cái gì vào code của mình. Vd khi lập trình C, C++ chúng ta khai báo biến cùng kiểu của nó (strong typed language) tức là ta đã chỉ định cho compiler biết trước đây là kiểu dữ liệu gì, cần bao nhiêu bộ nhớ, cấp phát tại heap hay stack ... Nhưng với python, js ta không cần khai báo kiểu, đồng nghĩa với việc máy tính sẽ phải thêm 1 bước nội suy ra xem đây là kiểu dữ liệu gì để còn cấp phát bộ nhớ và kết quả là sẽ chậm đi khá nhiều.
+Càng nhiều lớp trừu tượng (abstraction) che phủ, chúng ta sẽ càng code ít hơn nhưng bù lại không thể biết được bên dưới compiler đã thêm thắt cái gì vào code của mình. Vd khi lập trình C, C++ chúng ta khai báo biến cùng kiểu của nó (strong typed language) tức là ta đã chỉ định cho compiler biết trước đây là kiểu dữ liệu gì, cần bao nhiêu bộ nhớ, cấp phát tại heap hay stack ... Nhưng với python, js ta không cần khai báo kiểu, đồng nghĩa với việc máy tính sẽ phải thêm 1 bước nội suy ra xem đây là kiểu dữ liệu gì để còn cấp phát bộ nhớ và kết quả là sẽ chậm đi khá nhiều.
 
 Việc tự cấp phát bộ nhớ lại có nhiều vấn đề khác như quên giải phóng bộ nhớ, giải phóng rồi nhưng vẫn truy cập vào, hoặc nhiều con trỏ cùng đọc ghi một vùng nhớ ... Và đó là cội nguồn của những nỗi đau mang tên segmentation fault trong C, C++.
 
