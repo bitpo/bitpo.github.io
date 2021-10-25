@@ -94,7 +94,7 @@ Rust có những bộ nguyên tắc để đảm bảo an toàn cho chương tr�
 * Một lô đất (ô nhớ) thì chỉ có **1** chủ (biến)
 * Lô đất đã được sang tên (gán) cho chủ mới thì cấm ông chủ cũ bén mảng tới 
 * Sổ đỏ chỉ tồn tại trong một khu vực (**scope**), ra khỏi khu vực đó thì sổ đỏ tự hủy.
-* Tại một thời điểm, **nhiều** ông có thể đến để xem đất (**read-only**), nhưng chỉ có 1 ông có quyền sử dụng đất đó (**write**).
+* Tại một thời điểm, **nhiều** ông có thể đến để xem đất (**read-only**), nhưng chỉ có **1** ông có quyền sử dụng đất đó (**write**).
 
 May mắn là Rust compiler sẽ giúp bạn giải phóng bộ nhớ bằng cách chèn thêm code vào code của bạn mỗi khi nó phát hiện thấy một biến không còn được sử dụng nữa. Dưới đây là vd minh họa khi Rust và C được biên dịch ra Assembly:
 
