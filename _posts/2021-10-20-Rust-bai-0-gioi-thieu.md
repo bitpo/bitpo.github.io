@@ -85,7 +85,7 @@ Giải pháp cho vấn đề này là thuê "một bác lao công", thi thoảng
 
 ![](/imgs/3.png)
 
-Rust không dùng **GC**, quay lại với câu chuyện họp hành, nếu mỗi team sau khi họp xong đều có ý thức tự dọn rác của mình thì ... bác lao công thất nghiệp và team 1 đi ra thì team 2 vào quẩy luôn được. Nhưng để làm sao ai cũng có ý thức tự giác đó, đơn giản thôi, hãy đặt ra các nguyên tắc trước khi rời phòng họp! Ban đầu thì có vẻ chưa quen và khó chịu, nhưng lâu dần nó thành bản năng và ý thức cá nhân. Tuyệt quá phải không nào, Rust đã làm như vậy.
+Rust không dùng **GC**, quay lại với câu chuyện họp hành, nếu mỗi team sau khi họp xong đều có ý thức **tự dọn rác** của mình thì ... bác lao công thất nghiệp và team 1 đi ra thì team 2 vào quẩy luôn được. Nhưng để làm sao ai cũng có ý thức tự giác đó, đơn giản thôi, hãy đặt ra các **nguyên tắc** trước khi rời phòng họp! Ban đầu thì có vẻ chưa quen và khó chịu, nhưng lâu dần nó thành bản năng và ý thức cá nhân. Tuyệt quá phải không nào, Rust đã làm như vậy.
 
 Rust có những bộ nguyên tắc để đảm bảo an toàn cho chương trình, compiler sẽ báo lỗi ngay cho bạn trong lúc biên dịch. Do đó chương trình được build ra chắc chắn đã được duyệt và khá an toàn cho quá trình runtime. Các nguyên tắc của Rust khá phức tạp mình sẽ nói một cách kỹ thuật trong những bài sau, tại bài viết này, mình sẽ trừu tượng hóa nó thành câu chuyện bất động sản:
 
