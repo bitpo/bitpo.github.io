@@ -83,6 +83,8 @@ Trong C, C++ việc cấp phát bộ nhớ (`malloc`, `new`) là hoàn toàn t�
 
 Giải pháp cho vấn đề này là thuê "một bác lao công", thi thoảng vào dọn dẹp mớ con trỏ bạn quên giải phóng và đó chính là **garbage collector** (GC), nhiều ngôn ngữ đã áp dụng kĩ thuật này như Go, Java, C#, python, JS ... Ưu điểm là giúp bạn tập trung vào business code, logic code nhưng nhược điểm chết người của nó chính là performance. Hãy cứ tưởng tượng cơ quan bạn có duy nhất 1 phòng họp, đúng nguyên tắc là 1 team họp xong thì phải đợi "bác lao công" vào dọn dẹp xong thì team khác mới được vào, lần nào cũng vậy thì hiệu suất ăn hành của dev bị giảm đi đáng kể.
 
+![](/imgs/3.png)
+
 Rust không dùng **GC**, quay lại với câu chuyện họp hành, nếu mỗi team sau khi họp xong đều có ý thức tự dọn rác của mình thì ... bác lao công thất nghiệp và team 1 đi ra thì team 2 vào quẩy luôn được. Nhưng để làm sao ai cũng có ý thức tự giác đó, đơn giản thôi, hãy đặt ra các nguyên tắc trước khi rời phòng họp! Ban đầu thì có vẻ chưa quen và khó chịu, nhưng lâu dần nó thành bản năng và ý thức cá nhân. Tuyệt quá phải không nào, Rust đã làm như vậy.
 
 Rust có những bộ nguyên tắc để đảm bảo an toàn cho chương trình, compiler sẽ báo lỗi ngay cho bạn trong lúc biên dịch. Do đó chương trình được build ra chắc chắn đã được duyệt và khá an toàn cho quá trình runtime. Các nguyên tắc của Rust khá phức tạp mình sẽ nói một cách kỹ thuật trong những bài sau, tại bài viết này, mình sẽ trừu tượng hóa nó thành câu chuyện bất động sản:
@@ -99,6 +101,8 @@ May mắn là Rust compiler sẽ giúp bạn giải phóng bộ nhớ bằng cá
 ![](/imgs/2.png)
 
 Assembly từ Rust có thêm vài câu lệnh để giải phóng bộ nhớ so với C, thêm một vài lệnh assembly để giữ cho chương trình không bị leak ram và lỗi tiềm ẩn khi chạy production là một đánh đổi rất hợp lý. Sẽ có nhiều người thắc mắc việc này có làm Rust chậm đi so vs C không thì câu trả lời là **không**. Vì nếu bạn code production bằng C thì kiểu gì bạn cũng phải thêm lệnh `free` vào code để giải phóng bộ nhớ, chưa kể có thể `free` nhầm chỗ hoặc double free thì thôi xong luôn.
+
+![](/imgs/4.png)
 
 # Rust có thể làm được gì?
 Ez, làm gì cũng được, nhưng là một ngôn ngữ lập trình hệ thống Rust chủ yếu được dùng để cạnh tranh với C/C++ về mặt performance và tăng độ an toàn cho phần mềm, OS ... có thể kể ra các công việc có thể dùng Rust:
