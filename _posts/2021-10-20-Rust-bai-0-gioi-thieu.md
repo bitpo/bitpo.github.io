@@ -20,7 +20,7 @@ fn main() {
 ## Đánh đổi giữa tốc độ và sự an toàn 
 Trước hết bạn hãy nhìn vào hình dưới đây
 
-![](/imgs/1.PNG)
+![](/imgs/1.png)
 
 Khi làm việc với Assembly bạn cần phải làm việc với ô nhớ, địa chỉ ô nhớ, tập lệnh ứng với loại CPU đang sử dụng, hãy nhìn đoạn mã Assembly hello world dưới đây và cảm ơn Chúa.
 ```
