@@ -16,9 +16,9 @@ Sau khi cài đặt chúng ta sẽ cần quan tâm tới các thành phần sau:
 ## a. rustup
 Công cụ quản lý version, toolchain của Rust, nó vô cùng hữu dụng khi bạn cần kiểm tra bộ cài Rust của mình đang như thế nào. Một số lệnh hay dùng:
 * `rustup show` - Hiển thị thông tin về Rust như version, vị trí cài đặt.
-* `rustup update` - Update toàn bộ Rust của bạn đến bản latest, bao gồm `cargo`, `rust-analyzer`, `rustc`, `rust-docs`, `rustfmt` ...
+* `rustup update` - Update toàn bộ Rust của bạn đến bản latest, bao gồm *cargo*, *rust-analyzer*, *rustc*, *rust-docs*, *rustfmt* ...
 * `rustup doc --book` - Mở Rust book mà không cần internet, quá ngon.
- `rustup --help` - Help, tôi không nhớ hết cmd thì có thứ này.
+* `rustup --help` - Help, tôi không nhớ hết cmd thì có thứ này.
 
 ## b. rustc
 rustc = rust compiler
@@ -36,11 +36,11 @@ rustc = rust compiler
 LSP server của Rust, đây là thứ giúp bạn có autocomplete, error check, ... khi code rust đó. Nó là công cụ không thể thiếu khi dev Rust. Bạn cũng không cần lo lắng cách cài đặt, nó sẽ được tải tự động khi bạn dùng các plugin, extension... khi dùng editor, IDE.
 
 ## **e. cargo**
-Đây là thành phần bạn sẽ dùng thường xuyên nhất, cargo là package manager của Rust tương tự như `npm`, `yarn`, `pip`, `gem` ... Hiện đại chưa, cái này ăn đứt bên C rồi. Các package/thư viên trong Rust được gọi là **crate* lệnh cơ bản:
+Đây là thành phần bạn sẽ dùng thường xuyên nhất, cargo là package manager của Rust tương tự như `npm`, `yarn`, `pip`, `gem` ... Hiện đại chưa, cái này ăn đứt bên C rồi. Các package/thư viện trong Rust được gọi là **crate**, dưới đây là các lệnh cơ bản:
 
-* `cargo new new-project` - Khởi tạo 1 project Rust mới.
+* `cargo new project-name` - Khởi tạo 1 project Rust mới.
 * `cargo run` - Build rồi run project.
-* `cargo build` - Build project, default là build bản debug, để build bản **release** các bạn thêm option `--release`.
+* `cargo build` - Build project, default là build bản **debug**, để build bản **release** các bạn thêm option `--release`.
 * `cargo install crate` - Install crate
 * `cargo update` - Install/update các crate có trong file Cargo.toml
  
@@ -75,4 +75,4 @@ edition = "2021"
 Đây là file config của project Rust (tương tự package.json trong nodejs). Các `crate` bạn install sẽ được liệt kê dưới `[dependencies]`
 
 # 5. Kết bài
-Đây là những đồ chơi và khá niệm cơ bản nhất trước khi bắt đầu vào hành trình chinh phục [Rust book](https://doc.rust-lang.org/stable/book/). Trong bài tiếp theo chúng ta sẽ nhúng tay vào code thử một minigame gằng Rust.
+Đây là những đồ chơi và khái niệm cơ bản nhất trước khi bắt đầu vào hành trình chinh phục [Rust book](https://doc.rust-lang.org/stable/book/). Trong bài tiếp theo chúng ta sẽ nhúng tay vào code thử một minigame gằng Rust.
