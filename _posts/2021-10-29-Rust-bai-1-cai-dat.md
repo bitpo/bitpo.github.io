@@ -3,6 +3,7 @@ title: Series Rust là cái rỉ sét - Bài 1 - Setup để code Rust như nào
 tags: Rust
 ---
 Chào mừng các bạn đã trở lại, hi vọng rằng sau khi đọc [Bài 1]() các bạn đã có cảm tình ban đầu với Rust, bài hôm nay chúng ta sẽ bàn về các thành phần và cách setup môi trường để code Rust.
+<!-- more-->
 # 1. Cài đặt
 Là một lập trình viên mình tin rằng việc setup Rust không có gì khó với các bạn.
 * Linux: `curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh`
